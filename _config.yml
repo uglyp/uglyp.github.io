@@ -14,10 +14,10 @@ links:
   - name:         首页
     url:          /
     external:     false
-  - name:         书籍
+  - name:         温故
     url:          /book
     external:     false
-  - name:         专题
+  - name:         知新
     url:          /road
     external:     false
   - name:         归档
