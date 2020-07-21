@@ -1857,7 +1857,7 @@ pre code::after {
     position: relative;
     z-index: 1;
     margin-top: 0;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     background-color: #fff;
 }
 
@@ -1890,12 +1890,14 @@ pre code::after {
     list-style: none;
     font-size: 1.3em;
     font-family: "Abril Fatface", serif;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-meta .footer-container {
     width: 68%;
     /* max-width: 1024px; */
-    height: 250px;
+    height: auto;
     margin: 0 auto;
 }
 
