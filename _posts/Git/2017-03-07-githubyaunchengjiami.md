@@ -1,6 +1,6 @@
 ---
 layout: blog
-istop: true
+istop: false
 title: "GitHub当作私密的版本控制系统远端版本库私有化哈"
 background-image: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576842596610&di=6784cf8150a508425de7934143986d4f&imgtype=0&src=http%3A%2F%2Fimg.mukewang.com%2F5774d9c40001841306000338-590-330.jpg
 date:  2017-03-07

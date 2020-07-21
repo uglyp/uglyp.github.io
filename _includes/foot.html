@@ -23,7 +23,7 @@
                         <p>Powered by Jekyll</p>
                         <p>
                             本文由  <a href="/" data-hover="uglyp"><span>uglyp</span></a> 创作，
-                            <br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>
+                            <br>本站文章除注明转载/出处外，<br>
                         </p>
                         <p>本博客已开源, 支持请<a href="http://ghbtns.com/github-btn.html?user=uglyp&repo=uglyp.github.io&type=star&count=true" data-hover="点击Star"><span>点击Star</span></a></p>
                         <iframe
@@ -35,17 +35,15 @@
             
             <div class="meta-item meta-posts">
                 <h3 class="meta-title">置顶文章</h3>
-                置顶
-                {% for post in site.posts limit:15 %}
+                {% for post in site.posts limit:5 %}
                 {% if post.istop %}
                 <li><a href="{{ post.url }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
                 {% endif %}
                 {% endfor %}
-                置顶
             </div>
             <div class="meta-item meta-comments">
                 <h3 class="meta-title">最新文章</h3>
-                {% for post in site.posts limit:14 %}
+                {% for post in site.posts limit:4 %}
                 {% if post.book %}
                 <li><a href="{{ post.url }}" data-hover="{{ post.title }}">{{ post.title }}</a></li>
                 {% endif %}

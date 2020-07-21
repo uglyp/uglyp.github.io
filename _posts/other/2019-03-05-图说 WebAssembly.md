@@ -1,6 +1,6 @@
 ---
 layout: blog
-istop: false
+istop: true
 book: true
 ico: web
 title: "图说 WebAssembly"

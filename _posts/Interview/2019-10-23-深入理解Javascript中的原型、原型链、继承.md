@@ -1,6 +1,6 @@
 ---
 layout: blog
-istop: true
+istop: false
 title: "深入理解Javascript中的原型、原型链、继承"
 background-image: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=493146188,1000916900&fm=15&gp=0.jpg
 date:  2019-10-23 12:45:56

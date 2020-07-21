@@ -1,6 +1,6 @@
 ---
 layout: blog
-istop: true
+istop: false
 title: "File和FileList和FileReader对象详解"
 background-image: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=493146188,1000916900&fm=15&gp=0.jpg
 date:  2019-09-22 22:45:00
