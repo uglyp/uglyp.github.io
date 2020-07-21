@@ -755,7 +755,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     animation: fade-in;
     animation-duration: .5s;
     width: 58%;
-    flex: 1;
+    flex: 1
+    ;
 }
 
 .index-page {
