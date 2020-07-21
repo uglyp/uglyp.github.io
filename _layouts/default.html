@@ -1,0 +1,180 @@
+<!DOCTYPE>
+<!-- 主页 -->
+<html lang="zh-cn" data-scribe-reduced-action-queue="true">
+    <meta http-equiv="x-dns-prefetch-control" content="on"> 
+    <meta name="apple-mobile-web-app-title" content="blog"> 
+    <meta name="referrer" content="no-referrer"> 
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform user-scalable=no"/>
+	  <meta http-equiv="Cache-Control" content="no-siteapp user-scalable=no"/>  
+    <title>{{ site.title }}</title>
+    {% include head.html %}
+  </head>
+<body id="body" class="bg-grey" gtools_scp_screen_capture_injected="true" onscroll="scroll()"><div id="MathJax_Message" style="display: none;"></div>
+<header id="header" class="header bg-white">
+    <div class="navbar-container">
+      <a href="/" class="navbar-logo"> <img src="{{ site.url }}/style/images/logo.png" alt="{{ site.title }}"> </a>
+        <div class="navbar-menu">
+           {% for link in site.links %}             
+            <a href="{{ link.url }}" data-hover="{{link.name}}">{{ link.name }}</a>
+                {% endfor %}
+          </div>
+        <div class="navbar-search" onclick="">
+            <span class="icon-search"></span>
+            <form method="post" action="/404.html" role="search">
+                <span class="search-box">
+         <input type="text" class="input" id="cb-search-content" required="true" placeholder="标题123 标签..." maxlength="30" autocomplete="off">
+                </span>
+            </form>
+        </div>
+        <div class="navbar-mobile-menu" onclick="">
+            <span class="icon-menu cross"><span class="middle"></span></span>
+            <ul>
+               {% for link in site.links %}           
+                <li><a href="{{ link.url }}" data-hover="{{link.name}}">{{ link.name }}</a></li>
+                 {% endfor %}
+            </ul>
+        </div>
+    </div>
+</header>
+
+      <main class="tl f6 relative pa4 pa5-ns overflow-hidden">
+        {% if page.title %}
+          <div class="mb4">
+            {% if page.date %}<div class="fw600 light-silver mt1">{{ page.date | date_to_string }}</div>{% endif %}
+            <h1 class="ttu f3 mt0 lh-title cb mb2">
+              {% if is_post %}
+              {% endif %}
+              {{ page.title }}
+            </h1>
+            {% if is_post and site.share %}
+              <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-action="like"></div>
+            {% endif %}
+          </div>
+        {% endif %}
+        <div class="markdown-body">
+          {{ content }}
+        </div>
+        {% if is_post %}{% include signoff.html %}{% endif %}
+      </main>
+      {% if is_post %}{% include pagination.html %}{% endif %}
+    </div>
+{% include foot.html %}
+  </body>
+
+  <!-- <script type="text/javascript">
+    window.onload = function(){
+        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            var element=document.getElementById("mainContent")
+            console.log(element.style)
+            element.style.width = '100%'
+        } else {
+            var element=document.getElementById("mainContent")
+            console.log(element)
+    }
+    }
+</script> -->
+
+<script>
+  
+
+  document.getElementById("body").addEventListener("touchstart", function(e) {
+　　　　e.preventDefault();
+       console.log(e,'hahahhahah')
+// 　　　　startX = e.originalEvent.changedTouches[0].pageX,
+// 　　　　startY = e.originalEvent.changedTouches[0].pageY;
+       startX = e.changedTouches[0].pageX,
+　　　　startY = e.changedTouches[0].pageY;
+        var element=document.getElementById("header")
+        console.log(element.style.display,'element')
+        element.style.display= ""
+
+　　});
+　　document.getElementById("body").addEventListener("touchmove", function(e) {
+　　　　e.preventDefault();
+       console.log(e,'222222')
+// 　　　　moveEndX = e.originalEvent.changedTouches[0].pageX,
+// 　　　　moveEndY = e.originalEvent.changedTouches[0].pageY,
+       moveEndX = e.changedTouches[0].pageX,
+　　　　moveEndY = e.changedTouches[0].pageY,
+　　　　X = moveEndX - startX,
+　　　　Y = moveEndY - startY;
+
+　　　　if ( Math.abs(X) > Math.abs(Y) && X > 0 ) {
+            console.log('left 2 right')
+　　　　}
+　　　　else if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {
+　　　　　　 console.log("right 2 left");
+　　　　}
+　　　　else if ( Math.abs(Y) > Math.abs(X) && Y > 0) {
+　　　　　　console.log("top 2 bottom");
+           var element=document.getElementById("header")
+           console.log(element.style.display,'element')
+           element.style.display= ""
+　　　　}
+　　　　else if ( Math.abs(Y) > Math.abs(X) && Y < 0 ) {
+　　　　　　console.log("bottom 2 top");
+           var element=document.getElementById("header")
+           console.log(element.style.display,'element')
+           element.style.display = "none"
+      
+　　　　}
+　　　　else{
+　　　　　　console.log("just touch default");
+           
+　　　　}
+　　});
+
+</script>
+
+  <script type="text/javascript"> 
+ 
+    function scroll(){
+     //console.log("打印log日志");实时看下效果
+     console.log("zhuye开始滚动！");
+    }
+  
+    var scrollFunc = function (e) { 
+     e = e || window.event; 
+     if (e.wheelDelta) { //第一步：先判断浏览器IE，谷歌滑轮事件    
+      if (e.wheelDelta > 0) { //当滑轮向上滚动时 
+       console.log("zhuye滑轮向上滚动"); 
+       var element=document.getElementById("header")
+       console.log(element.style.display,'element')
+       element.style.display= ""
+      } 
+      if (e.wheelDelta < 0) { //当滑轮向下滚动时 
+       console.log("滑轮向下滚动"); 
+       var element=document.getElementById("header")
+       console.log(element.style.display,'element')
+       element.style.display = "none"
+      } 
+     } else if (e.detail) { //Firefox滑轮事件 
+      if (e.detail> 0) { //当滑轮向上滚动时 
+       console.log("滑轮向上滚动"); 
+       var element=document.getElementById("header")
+       console.log(element.style.display,'element')
+       element.style.display = ""
+      } 
+      if (e.detail< 0) { //当滑轮向下滚动时 
+       console.log("滑轮向下滚动"); 
+       var element=document.getElementById("header")
+       console.log(element.style.display,'element')
+       element.style.display = "none"
+      } 
+     } 
+    }
+    //给页面绑定滑轮滚动事件 
+    if (document.addEventListener) {//firefox 
+     document.addEventListener('DOMMouseScroll', scrollFunc, false); 
+    } 
+    //滚动滑轮触发scrollFunc方法 //ie 谷歌 
+    window.onmousewheel = document.onmousewheel = scrollFunc;
+  
+  
+   </script> 
+</html>
