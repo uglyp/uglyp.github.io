@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: 关于LiberXue
-description: "关于LiberXue博客角落自述"
+title: 关于
+description: "关于博客角落自述"
 data: 2019-08-05 09:19:11
 tags: 
 - LiberXue
